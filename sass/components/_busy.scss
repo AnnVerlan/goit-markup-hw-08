@@ -1,0 +1,50 @@
+.business {
+&__title {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+&__block {
+    padding-bottom: 94px;
+}
+&__list {
+    display: flex;
+    gap: 30px;
+}
+
+&__item {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+&__card {
+    position: relative;
+    overflow: hidden;
+}
+&__card>
+&__text {
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    background-color: #2F303A80;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    bottom: 0;
+}
+&__icon {
+    position: relative;
+}
+&__text {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+}

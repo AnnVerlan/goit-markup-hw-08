@@ -1,0 +1,207 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000033;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 250ms linear, opacity 250ms linear;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  padding: 39px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--color-white);
+  min-width: 528px;
+  min-height: 581px;
+  padding: 20px;
+  transition: transform 250ms linear;
+}
+.modal-title {
+  margin: 0;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+  }
+
+.data {
+&__form {
+  display: block;
+  width: 100%;
+  height: 466px;
+  margin: 0;
+}
+&__label {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(117, 117, 117, 1);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.171;
+  letter-spacing: 0.01em;
+}
+&__input {
+  display: block;
+  padding: 11px 12px 11px 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: var(--color-active);
+  }
+  &:hover+.data__icon,
+  &:focus+.data__icon {
+  fill: var(--color-active);
+}
+}
+&__block {
+  margin: 0;
+  margin-bottom: 10px;
+  position: relative;
+  color: var(--color-black);
+}
+&__icon {
+  position: absolute;
+  left: 12px;
+  top: 11px;
+  pointer-events: none;
+  fill: var(--color-black);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover {
+  fill: var(--color-active);
+}
+}
+&__comment {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 16px 12px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+&:hover,
+&:focus {
+  border-color: var(--color-active);
+}
+&::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+}
+&__agreement {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+&__link {
+  color: var(--color-active);
+}
+}
+.data-check-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+.data-check-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-primary);
+  border-radius: 2px;
+  background-color: var(--color-white);
+  color: var(--color-white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-check-icon {
+  fill: currentColor;
+}
+
+.data-checkbox:checked + .data-check-border {
+  background-color: var(--color-active);
+  border: none;
+}
+
+.data-button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px 52px;
+  background-color: var(--color-active);
+  color: var(--color-white);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-button:hover,
+.data-button:focus {
+  background-color: rgba(33, 150, 243, 1);
+}
+
+.btn-x {
+  position: relative;
+  left: 450px;
+  top: -16px;
+  width: 30px;
+  height: 30px;
+  border-color:  #00000010;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-white);
+}
+.btn-x:hover,
+.btn-x:focus {
+  fill: var(--color-active);
+}
+.close {
+  position: absolute;
+  top: 22%;
+  left: 31%;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5), opacity 250ms linear;
+}
+
